@@ -232,6 +232,29 @@ print(list(main_gen()))''',
     explanation: 'yield from delegates generator iteration to subgen(), flattening its yielded elements.',
     hint: 'yield from delegates to another generator directly!',
   ),
+  const Question(
+    id: 'l3_q4',
+    language: 'Dart',
+    title: 'Dart 3 Pattern Matching & Records',
+    codeSnippet: '''var (a, [b, c]) = ('Byte', [2, 4]);
+switch ((a, b + c)) {
+  case ('Byte', > 5):
+    print('Quest Master');
+  case ('Byte', _):
+    print('Quest Initiate');
+  default:
+    print('Unknown');
+}''',
+    options: [
+      'Quest Master',
+      'Quest Initiate',
+      'Unknown',
+      'Compile Error',
+    ],
+    correctOptionIndex: 0,
+    explanation: 'b + c evaluates to 2 + 4 = 6. In the switch statement, the record matches the first case where a == "Byte" and 6 > 5.',
+    hint: 'Evaluate b + c, then test the relational pattern > 5!',
+  ),
 ];
 
 // All Stages definitions
