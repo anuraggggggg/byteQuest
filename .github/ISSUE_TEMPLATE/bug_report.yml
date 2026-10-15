@@ -1,0 +1,42 @@
+name: 🐛 Bug Report
+description: Report a bug or unintended behavior in ByteQuest
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue in ByteQuest! Please fill out the sections below.
+  - type: input
+    id: version
+    attributes:
+      label: Flutter & OS Version
+      description: What version of Flutter and operating system are you using?
+      placeholder: Flutter 3.x on Windows / Android 14 / iOS 17
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Open stage selection
+        2. Tap on Level 2
+        3. Submit option A
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen.
+    validations:
+      required: true
